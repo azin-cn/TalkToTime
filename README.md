@@ -7,4 +7,4 @@ The community of life traveling，增加生活乐趣
 
 <img src="README.assets/image-20220801223722279.jpg" alt="image-20220801223722279" style="zoom: 33%;" /> <img src="README.assets/image-20220801223811030.jpg" alt="image-20220801223811030" style="zoom: 33%;" />
 
-<img src="README.assets/image-20220801223903650.jpg" alt="image-20220801223903650" style="zoom:33%;" /><img src="README.assets/image-20220801223936510.jpg" alt="image-20220801223936510" style="zoom:33%;" />
+<img src="README.assets/image-20220801223903650.jpg" alt="image-20220801223903650" style="zoom:33%;" /> <img src="README.assets/image-20220801223936510.jpg" alt="image-20220801223936510" style="zoom:33%;" />  
