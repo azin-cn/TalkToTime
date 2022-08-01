@@ -5,6 +5,6 @@ The community of life traveling，增加生活乐趣
 
 |                                                              |                                                              |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![image-20220801223722279](README.assets/image-20220801223722279.png) | ![image-20220801223811030](README.assets/image-20220801223811030.png) |
-| ![image-20220801223903650](README.assets/image-20220801223903650.png) | ![image-20220801223936510](README.assets/image-20220801223936510.png) |
+| ![image-20220801223722279](README.assets/image-20220801223722279.jpg) | ![image-20220801223811030](README.assets/image-20220801223811030.jpg) |
+| ![image-20220801223903650](README.assets/image-20220801223903650.jpg) | ![image-20220801223936510](README.assets/image-20220801223936510.jpg) |
 |                                                              |                                                              |
