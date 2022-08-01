@@ -1,0 +1,10 @@
+/* 滚动区域 */
+.note-scroll {
+  overflow: hidden;
+}
+.note-scroll .scroll-content {
+  padding-bottom: 24px;
+}
+.note-scroll .note-card {
+  margin-top: 18px;
+}

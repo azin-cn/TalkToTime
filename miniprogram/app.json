@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/profile/profile",
+    "pages/publish/publish",
+    "pages/camera/camera",
+    "pages/article/article",
+    "pages/login/login",
+    "pages/cropper/cropper"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置信息将为您匹配优质内容"
+    }
+  },
+  "plugins": {
+    "chooseLocation": {
+      "version": "1.0.9",
+      "provider": "wx76a9a06e5b4e693e"
+    }
+  }
+}

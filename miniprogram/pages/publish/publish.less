@@ -1,0 +1,164 @@
+.w {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  margin: 2px auto;
+  background-color: #ccc;
+}
+
+.publish {
+  height: 100vh;
+  padding-top: 12px;
+}
+
+.form-data {
+  .title-box {
+    display: flex;
+    align-items: center;
+
+    .title-input {
+      flex: 1;
+      font-size: 32rpx /* 16px -> 32rpx */;
+      color: #333;
+    }
+    .publish-btn {
+      margin-bottom: 4px;
+      letter-spacing: 4rpx /* 2px -> 4rpx */;
+      line-height: 2.3;
+      font-size: 14px; /* 设置rpx失效 */
+      font-weight: 700;
+    }
+  }
+  .content-box {
+    width: 100%;
+    margin-top: 12px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .content-letter-length-tip {
+    text-align: right;
+    color: #ccc;
+  }
+}
+
+.media-box {
+  /* 可以不使用flex布局，使用float也可 */
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; /* 允许换行 */
+  margin: 0 auto;
+
+  width: 100%;
+  margin-top: 32rpx;
+  text-align: center;
+
+  --containerHeight--: 300rpx /* 150px -> 300rpx */;
+}
+
+.image-container,
+.append-media-tip {
+  overflow: hidden;
+  position: relative;
+  width: 31%;
+  height: var(--containerHeight--);
+  margin-top: 18px;
+  border-radius: 6px;
+  box-shadow: 0 0 12px 1px rgba(131, 131, 131, 0.3);
+}
+
+.image-container,
+.video-container {
+  position: relative;
+
+  .del-icon {
+    --del--: 38rpx /* 19px -> 38rpx */;
+    z-index: 9;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: var(--del--);
+    height: var(--del--);
+    line-height: var(--del--);
+    font-size: 20rpx /* 10px -> 20rpx */;
+    border-radius: 12px;
+    vertical-align: middle;
+    background-color: rgba(131, 131, 131, 0.4);
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(131, 131, 131, 0.4);
+  }
+  .video {
+    width: 100%;
+  }
+}
+
+.image-container {
+  /* 为了居中，设置每行最后一个元素的margin-right为0 */
+  margin-right: calc(~"( 100% - 3 * 31% ) / 2");
+}
+.video-container {
+  width: 100%;
+  margin: 0 auto;
+  .del-icon {
+    background-color: #FFF;
+  }
+}
+
+/* 设置每行的最后一个元素margin-right为0，包括提示 */
+.image-container:nth-child(3n),
+.append-media-tip {
+  margin-right: 0;
+}
+
+.append-media-tip {
+  text-align: center;
+  box-shadow: 0 0 12px 1px rgba(131, 131, 131, 0.1);
+  .plus-icon {
+    width: 90%;
+    // transform: translateY(-50%);
+    margin-top: 25%;
+  }
+}
+.location-line {
+  margin-top: 32px;
+  background-color: rgba(131, 131, 131, .14);
+}
+
+.location {
+  --h--: 32px;
+  display: flex;
+  justify-content: space-between;
+  height: var(--h--);
+  margin-top: 6px;
+  padding: 0 12px;
+  margin-bottom: 32px;
+
+  .icon-map, .icon-arrow-right {
+    width: 20px;
+    height: 90%;
+  }
+  .location-name {
+    flex: 1;
+    padding-left: 12px;
+    text-align: left;
+    line-height: var(--h--);
+    color: #333;
+    font-size: 14px;
+
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .arrow-right {
+    
+  }
+}

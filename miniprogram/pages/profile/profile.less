@@ -1,0 +1,134 @@
+.w {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.profile {
+  --lrpadding--: 12px;
+  --cardbr--: 32rpx /* 16px -> 32rpx */;
+  --color--: #666;
+}
+
+/* 头部卡片 start */
+.profile-card {
+  --h--: 96rpx /* 48px -> 96rpx */;
+  margin-top: 10px;
+  padding: 36rpx /* 18px -> 36rpx */ 24rpx /* 12px -> 24rpx */;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 12px 4px rgba(131, 131, 131, .3);
+}
+/* card 第一行 */
+.card-first-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .info {
+    flex: 1;
+    padding-left: 24rpx /* 12px -> 24rpx */;
+  }
+  .avatar {
+    width: var(--h--);
+    height: var(--h--);
+    background-color: yellow;
+    border: 3px solid #FFF;
+    border-radius: 50%;
+  }
+}
+
+.info-first-line,
+.info-tag {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-first-line {
+  padding-bottom: 12rpx /* 6px -> 12rpx */;
+  .info-nickname {
+    font-size: 16px;
+  }
+  .edit-btn {
+    --fontsize--: 26rpx /* 13px -> 26rpx */;
+    padding: 0 4px;
+    line-height: 1.8;
+
+    font-size: var(--fontsize--);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, .3);
+    box-shadow: 0 0 1px 2px rgba(131, 131, 131, .3);
+    .icon-shezhi {
+      font-size: var(--fontsize--)!important;
+    }
+  }
+}
+
+.info-tag {
+  color: #FFF;
+  font-size: 24rpx /* 12px -> 24rpx */;
+  .tag-level,
+  .tag-gender {
+    display: inline-block;
+    padding: 2rpx /* 1px -> 2rpx */ 8rpx /* 4px -> 8rpx */;
+    border-radius: 16rpx /* 8px -> 16rpx */;
+    background-color: pink;
+  }
+  .tag-gender {
+    margin-left: 32rpx /* 16px -> 32rpx */;
+    .gender {
+      color: coral;
+    }
+  }
+}
+
+/* 第二行 */
+.card-second-line {
+  color: var(--color--);
+  padding: 28rpx /* 14px -> 28rpx */ 0;
+  font-size: 26rpx /* 13px -> 26rpx */;
+}
+/* 最后一行 */
+.card-last-line {
+  display: flex;
+  justify-content: flex-start;
+  color: #555;
+  font-size: 24rpx /* 12px -> 24rpx */;
+  .last-line-item:nth-child(n-1) {
+    text-align: center;
+    margin-right: 38px;
+  }
+}
+
+/* 头部卡片 end */
+
+/* 导航区start */
+.nav-bar {
+  position: sticky;
+  top: -2px;
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0;
+  padding: 6px var(--lrpadding--) 0;
+  border-radius: var(--cardbr--);
+  background-color: #fff;
+
+  .nav-item {
+    transition: all .3s;
+  }
+
+  .active {
+    border-bottom: 4px solid #ccc;
+    padding: 0 2px 2px;
+  }
+}
+/* 若stick定位出错则使用fixed代替 */
+.fixed-nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  margin: 0;
+  padding: 4px calc(~"5% + 24rpx");
+  background-color: #FFF;
+}
+/* 导航区end */
+
+/* 足迹card区域 */

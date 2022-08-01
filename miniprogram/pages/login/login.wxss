@@ -1,0 +1,53 @@
+.w {
+  width: 90%;
+  margin: 0 auto;
+}
+.register {
+  margin-top: 80px;
+}
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+}
+.avatar {
+  --wh--: 112rpx /* 56px -> 112rpx */;
+  display: block;
+  width: var(--wh--);
+  height: var(--wh--);
+}
+.tips {
+  color: #666;
+  margin-top: 8px;
+  font-weight: 400;
+  font-size: 10px;
+  text-align: center;
+}
+.form-data {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 120rpx /* 60px -> 120rpx */;
+}
+.form-data .nickname,
+.form-data .gender {
+  display: flex;
+  padding: 24rpx /* 12px -> 24rpx */;
+  font-size: 32rpx /* 16px -> 32rpx */;
+}
+.nickname-tip,
+.gender-tip {
+  color: #333;
+  font-size: 17px;
+}
+.nickname-input {
+  flex: 1;
+  padding-left: 38px;
+}
+.radio {
+  padding-left: 38px;
+}
+.submit {
+  display: block;
+  margin-top: 180px;
+}

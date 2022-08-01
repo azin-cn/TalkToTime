@@ -1,0 +1,42 @@
+<view class="publish w">
+  <!-- 文字内容区域 -->
+  <form class="form-data" bindsubmit="publish">
+    <view class="title-box">
+      <input class="title-input" name="title" value="{{title}}" type="text" placeholder="{{title_placeholder}}" placeholder-class="input-placeholder" maxlength="{{max_title_length}}" bindinput="" bindblur="handleSetTitle"></input>
+      <button class="publish-btn" size="mini" type="primary" loading="{{loading}}" form-type="submit">
+        发布
+      </button>
+    </view>
+    <view class="line" />
+    <textarea class="content-box" value="{{content}}" placeholder="{{content_placeholder}}" placeholder-style="" placeholder-class="textarea-placeholder" show-confirm-bar maxlength="{{max_content_length}}" bindinput="handleInputContent" bindblur="handleSetContent"></textarea>
+    <view class="content-letter-length-tip">{{content_length}} / {{max_content_length}}</view>
+  </form>
+  <!-- 有图片无视频，有视频无图片，使用时间代理 -->
+  <view class="media-box" bind:tap="handleTapMedia">
+    <!-- 如果媒体文件类型为图片，允许多张进行遍历 -->
+    <block wx:if="{{type === 'image'}}">
+      <view class="image-container" wx:for="{{image_list}}" wx:for-item="image" wx:key="image">
+        <view class="del-icon" data-index="{{index}}">×</view>
+        <image class="image" src="{{image}}" mode="aspectFill" data-type="{{type}}" data-index="{{index}}" lazy-load webp bindload="handleLoadImage" />
+      </view>
+    </block>
+    <!-- 如果媒体文件为视频，只允许一个 -->
+    <block wx:else>
+      <view class="video-container">
+        <view class="del-icon" data-index="{{0}}">×</view>
+        <video class="video" src="{{video_src}}" data-type="{{type}}" initial-time="{{0}}" muted="{{false}}" direction="0" bindplay="" bindwaiting="handleWaitingVideo"></video>
+      </view>
+    </block>
+    <!-- 添加媒体文件的标记，只要有一个视频文件，那么不能再添加，注意时间代理的影响 -->
+    <view hidden="{{image_list.length >= max_image_list_length || type === 'video'}}" data-type="append" class="append-media-tip" capture-catch:tap="handleAppendMedia">
+      <image class="plus-icon" mode="widthFix" src="../../assets/images/add-fill.png" />
+    </view>
+  </view>
+
+  <view class="line location-line"></view>
+  <view class="location" bind:tap="handleChooseLocation">
+    <image class="icon-map iconfont " src="../../assets/images/location.png" mode="aspectFit"></image>
+    <view class="location-name">{{location}}</view>
+    <image class="icon-arrow-right iconfont " src="../../assets/images/arrow-right.png" mode="aspectFit"></image>
+  </view>
+</view>

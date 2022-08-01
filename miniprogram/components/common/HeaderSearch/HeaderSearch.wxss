@@ -1,0 +1,33 @@
+/* components/HeaderSearch/HeaderSearch.wxss */
+.header-search {
+  --h--: 60rpx /* 30px -> 60rpx */;
+  --r--: 32rpx /* 16px -> 32rpx */;
+  display: flex;
+  height: var(--h--);
+  line-height: var(--h--);
+  color: #FFF;
+}
+.header-search .mine {
+  flex: 1;
+  text-align: center;
+  font-size: 32rpx /* 16px -> 32rpx */;
+  background-color: #3BB19B;
+  border-radius: var(--r--);
+}
+.header-search .input-area {
+  flex: 2.3;
+  display: flex;
+  margin-left: 24rpx /* 12px -> 24rpx */;
+  padding: 0 8px;
+  background-color: #F4F4F4;
+  border-radius: var(--r--);
+  box-shadow: 0 0 2px 1px rgba(131, 131, 131, 0.16);
+  color: #333;
+  font-size: 28rpx /* 14px -> 28rpx */;
+}
+.header-search .input-area .input {
+  flex: 1;
+  align-self: center;
+  display: inline-block;
+  padding-left: 12rpx /* 6px -> 12rpx */;
+}

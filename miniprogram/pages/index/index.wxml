@@ -1,0 +1,20 @@
+<!-- pages/index/index.wxml -->
+<view class="index">
+  <view class="index-header w">
+    <!-- header-nav -->
+    <HeaderNav titles="{{titles}}"></HeaderNav>
+    <!-- 搜索 -->
+    <view class="index-header-search">
+      <HeaderSearch></HeaderSearch>
+    </view>
+  </view>
+
+  <!-- Note模块 -->
+  <Note ext-class="note-ext-class" id="Note"
+    scroll_top="{{scroll_top}}" bind:showToTop="onShowToTop">
+  </Note>
+  
+  <!-- 回到顶部 和 刷新 -->
+  <view class="refresh-top iconfont {{show_to_top?'icon-fanhuidingbu':'icon-shuaxin'}}" 
+    bind:tap="onTapIcon" />
+</view>

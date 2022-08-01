@@ -1,0 +1,74 @@
+<!-- components/InfoCard/Card/Card.wxml -->
+<view class="info-card">
+  <!-- Header Start -->
+  <view class="header" bind:tap="handleGetUserInfo">
+    <!-- 头像 -->
+    <image class="header-avatar" src="{{avatar_url}}" mode="aspectFill" webp lazy-load />
+    <!-- info模块 -->
+    <view class="header-info">
+      <view>
+        <text class="header-username">{{username}}</text>
+        <view class="header-tag {{official ? 'header-official iconfont icon-good' : ''}}">
+          {{tag}}
+        </view>
+      </view>
+      <view class="header-published-date">{{published_date}}</view>
+    </view>
+    <!-- 模块  阻止事件冒泡 -->
+    <view class="header-attention iconfont" capture-catch:tap="handleAttend">
+      {{ is_attend ? '已关注': '关注'}}
+    </view>
+  </view>
+  <!-- Header End -->
+  <!-- Main Start -->
+  <view class="main" bind:tap="handleGetDetail">
+    <!-- 标题栏 -->
+    <view class="main-title">{{title}}</view>
+    <!-- 正文内容 -->
+    <view class="main-content" user-select>{{content}}</view>
+    <!-- 图片展示-->
+    <image class="main-image" src="{{url}}" mode="aspectFill" webp lazy-load 
+        binderror="handleLoadError" bindload="handleLoadedImg"
+    />
+  </view>
+  <!-- Main End -->
+  <!-- Footer Start -->
+  <view class="footer">
+    <!-- 上栏信息展示，点赞量，收藏亮，评论量 -->
+    <view class="footer-info">
+      <!-- 左侧文字显示 -->
+      <view class="footer-info-text">
+        <!-- 图标头像显示 -->
+        <view class="footer-info-text-first-child">
+          <image class="footer-avatar" mode="aspectFill" webp lazy-load></image>
+          <image class="footer-avatar-a" mode="aspectFill" webp lazy-load></image>
+          <image class="footer-avatar-b" mode="aspectFill" webp lazy-load></image>
+          <text class="footer-text">{{footer_brief_info_tip}}</text>
+        </view>
+        <!-- 信息显示 -->
+        <view class="footer-info-text-last-child">{{footer_brief_info}}</view>
+      </view>
+      <!-- 右侧图标显示 结合handles进行显示 -->
+      <view class="footer-info-icon" bind:tap="handleTapIcon">
+        <text wx:for="{{footer_icons}}" wx:for-item="icon" wx:key="icon" class="iconfont {{icon}} {{footer_handle_icons[index]?'footer-icon-selected':''}}" data-icon="{{icon}}" />
+      </view>
+    </view>
+    <!-- 中栏精选评论显示 -->
+    <view class="footer-hot-comment">
+      <view class="hot-comment-item" wx:for="{{top_comments}}" wx:for-item="comment" wx:key="comment">
+        {{comment}}
+      </view>
+    </view>
+    <view class="more-comment" bind:tap="handleTapMoreComment">查看更多评论 ></view>
+    <!-- 下栏评论区域 -->
+    <!-- <view class="footer-remark ">
+      <input type="text" value="{{footer_input_val}}" adjust-position="{{false}}" placeholder="喜欢就评论告诉TA" bind:confirm="handleCommitComment" bind:focus="inputFocus" bind:blur="inputBlur" 
+        class="footer-remark-input {{footer_bottom===0 ? '' : 'footer-remark-input-focus'}}" 
+        style="bottom: {{footer_bottom}}px" />
+    </view> -->
+    <!-- <input type="text" adjust-position="{{false}}" placeholder="喜欢就评论告诉TA" 
+        bind:confirm="handleCommitComment" bind:focus="inputFocus" bind:blur="inputBlur" 
+        class="footer-remark-input" style="bottom: {{footer_bottom}}px" /> -->
+  </view>
+  <!-- Footer End -->
+</view>

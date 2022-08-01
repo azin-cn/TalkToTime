@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "InfoCard": "../../common/InfoCard/InfoCard"
+  },
+  "styleIsolation": "apply-shared"
+}

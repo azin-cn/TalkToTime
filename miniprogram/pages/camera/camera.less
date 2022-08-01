@@ -1,0 +1,50 @@
+.photo{
+  width: 100%; 
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.tip {
+  position: fixed;
+  left: 50%; bottom: 220rpx /* 110px -> 220rpx */;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #FFF;
+}
+
+.back-icon {
+  position: fixed;
+  left: 80rpx /* 40px -> 80rpx */;
+  bottom: 90rpx /* 45px -> 90rpx */;
+  padding: 8rpx /* 4px -> 8rpx */;
+  color: #FFF;
+  font-size: 36rpx /* 18px -> 36rpx */; 
+}
+ 
+.photo-btn{
+
+
+  box-sizing: border-box;
+  
+  --wh--: 68px;
+
+  position: fixed;
+  left: 50%;
+  bottom: 50rpx;
+  transform: translateX(-50%);
+  
+  width: var(--wh--)!important;
+  height: var(--wh--);
+  line-height: var(--wh--);
+  text-align: center;
+
+  border: 16rpx /* 8px -> 16rpx */ solid #CCC;
+  border-radius: 50%;
+  background-color: #FFF;
+}
+
+.press {
+  transition: all .3s;
+  background-color: rgba(255, 255, 255, .8);
+}

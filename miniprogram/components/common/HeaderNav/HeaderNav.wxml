@@ -1,0 +1,22 @@
+<view class="main">
+  <view class="header-nav">
+    <view wx:for="{{titles}}" wx:for-item="title" wx:key="title" class="header-nav-item {{ currentIndex===index ? 'active' : '' }}">
+      <view data-index="{{index}}" bind:tap="handleTapTitle" class="title iconfont {{ WxsArray.includes(hotArray,index) ? 'icon-hot' : '' }}" user-select>
+        {{title}}
+      </view>
+    </view>
+  </view>
+
+  <!-- 城市区选择 -->
+  <picker class="picker" mode="region" level="city" value="{{city}}" 
+      bindchange="onPickerChange" bindcancel="onPickerCancel">
+    <text>{{city}}</text><text class="iconfont" />
+  </picker>
+</view>
+<!-- 通过wxs进行处理 -->
+<wxs module="WxsArray">
+  var includes = function(array, target) {
+    return array.indexOf(target) != -1
+  }
+  module.exports.includes = includes
+</wxs>
