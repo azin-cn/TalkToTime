@@ -1,5 +1,0 @@
-{
-  "usingComponents": {
-    "TraceCard": "./components/TraceCard/TraceCard"
-  }
-}

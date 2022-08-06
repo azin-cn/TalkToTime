@@ -1,9 +1,0 @@
-{
-  "usingComponents": {
-    "HeaderNav": "../../components/common/HeaderNav/HeaderNav",
-    "HeaderSearch": "../../components/common/HeaderSearch/HeaderSearch",
-    "Note": "../../components/content/Note/Note"
-  },
-  "navigationBarTitleText": "TIME",
-  "backgroundColor": "#ffffff"
-}

@@ -1,8 +1,0 @@
-  <view class="trace-card" hidden="{{hidden}}">
-    <view class="card" wx:for="{{traces}}" wx:for-item="trace" wx:key="id" 
-        bind:tap="onShowMore" data-id="{{trace.id}}">
-      <view class="card-title">{{trace.title}}</view>
-      <image class="card-img" src="{{trace.url}}" mode="aspectFill" lazy-load />
-      <view class="card-location">{{trace.location}}</view>
-    </view>
-  </view>

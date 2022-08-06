@@ -1,0 +1,13 @@
+{
+  "name": "TalkToTime",
+  "version": "1.0.0",
+  "description": "TalkToTime",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "main": "index.js",
+  "repository": "https://github.com/azin-cn/TalkToTime.git",
+  "author": "azin-cn",
+  "license": "MIT"
+}
