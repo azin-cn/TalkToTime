@@ -1,5 +1,7 @@
 # TalkToTime
 
+重构中
+
 The community of life traveling，增加生活乐趣
 
 项目包括webapp前端、server后端。
